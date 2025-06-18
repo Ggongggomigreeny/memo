@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Web Memo Pad</title>
+        <link rel="stylesheet" href="style.css">
+        <script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-app-compat.js"></script>
+        <script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-firestore-compat.js"></script>
+    </head>
+    <body>
+        <div class="app-container">
+            <header class="app-header">
+                <div class="header-left">
+                    <span class="app-logo">📝</span>
+                    <span class="app-title">Web Memo Pad</span>
+                </div>
+                <div class="header-right">
+                    <button class="header-btn">설정</button>
+                </div>
+            </header>
+            <aside class="sidebar">
+                <div class="sidebar-title">카테고리</div>
+                <ul class="sidebar-list">
+                    <li class="active">전체 메모</li>
+                    <li>중요</li>
+                    <li>할 일</li>
+                    <li>아이디어</li>
+                    <li>기타</li>
+                </ul>
+                <button class="sidebar-add">+ 새 카테고리</button>
+            </aside>
+            <main class="main-content">
+                <div class="memo-input-area">
+                    <textarea id="memoInput" placeholder="메모를 입력하세요..."></textarea>
+                    <button id="addMemoBtn">입력</button>
+                </div>
+                <div id="memoList" class="memo-list">
+                    <!-- 메모들이 여기에 동적으로 추가됩니다 -->
+                </div>
+            </main>
+        </div>
+        <footer>
+            <p>&copy; 2024 Web Memo Pad. All rights reserved.</p>
+        </footer>
+        <script src="script.js"></script>
+    </body>
+</html> 
